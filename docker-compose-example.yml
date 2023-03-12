@@ -1,0 +1,12 @@
+version: '3.5'
+services:
+  denon-rest-api:
+    image: yenba/denon-rest-api
+    container_name: denon-rest-api
+    hostname: denon-rest-api
+    environment:
+      - ADDRESS=YOUR-RECEIVERS-IP-HERE
+      - PORT=8000
+    ports:
+      - 8000:8000
+    restart: unless-stopped
